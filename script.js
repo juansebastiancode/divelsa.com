@@ -45,26 +45,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 iconAnchor: [12, 24]
             });
 
-            // Zona de actuación ampliada
-            const zonaLevante = L.polygon([
-                [40.5, -0.5],
-                [40.2, 0.5],
-                [39.5, 0.8],
-                [38.5, 0.2],
-                [37.0, -1.5],
-                [36.7, -3.0],
-                [37.5, -2.5],
-                [38.5, -2.0],
-                [39.5, -2.2],
-                [40.0, -1.5],
-                [40.3, -0.8]
-            ], {
-                color: '#295cab',
-                fillColor: '#295cab',
-                fillOpacity: 0.25,
-                weight: 2
-            }).addTo(heroMap);
-
             // Marcadores de todas las tiendas
             const heroLocations = [
                 // Sede Central
@@ -413,26 +393,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 `);
             });
 
-            // Zona de actuación (polígono ampliado)
-            const zonaLevante = L.polygon([
-                [40.5, -0.5],
-                [40.2, 0.5],
-                [39.5, 0.8],
-                [38.5, 0.2],
-                [37.0, -1.5],
-                [36.7, -3.0],
-                [37.5, -2.5],
-                [38.5, -2.0],
-                [39.5, -2.2],
-                [40.0, -1.5],
-                [40.3, -0.8]
-            ], {
-                color: '#295cab',
-                fillColor: '#295cab',
-                fillOpacity: 0.15,
-                weight: 2
-            }).addTo(tiendasMap);
-        }
+            }
 
         // Mapa de Contacto
         const mapContacto = document.getElementById('map-contacto');
