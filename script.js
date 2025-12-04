@@ -468,7 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let currentSlide = 0;
         let autoplayInterval;
-        const autoplayDelay = 3000;
+        const autoplayDelay = 6000;
 
         function showSlide(index) {
             if (index >= slides.length) index = 0;

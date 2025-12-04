@@ -367,6 +367,40 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+/* Floating Labels */
+.floating-label {
+    position: absolute;
+    background: white;
+    color: #295cab;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: floatLabel 3s ease-in-out infinite;
+}
+
+.floating-label.label-1 {
+    top: 15%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.floating-label.label-2 {
+    bottom: 20%;
+    left: 5%;
+    animation-delay: 1.5s;
+}
+
+@keyframes floatLabel {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
 .slide-visual.slide-map {
     width: 100%;
     max-width: 550px;
@@ -709,7 +743,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
     font-weight: 700;
     color: var(--dark);
 }
@@ -898,6 +932,14 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 60px;
 }
 
+.cifras-grid.cifras-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cifra-plus {
+    font-size: inherit;
+}
+
 .cifra-card {
     text-align: center;
     padding: 40px 24px;
@@ -910,6 +952,13 @@ h1, h2, h3, h4, h5, h6 {
 .cifra-card:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-5px);
+}
+
+.cifra-numero {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
 }
 
 .cifra-icon {
@@ -2496,6 +2545,10 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .cifras-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cifras-grid.cifras-4 {
         grid-template-columns: repeat(2, 1fr);
     }
     
