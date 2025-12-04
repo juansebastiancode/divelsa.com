@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestras Tiendas - Divelsa | Distribución de Electrodomésticos</title>
+    <meta name="description" content="Encuentra los puntos de venta de Divelsa en el eje mediterráneo: Valencia, Castellón, Alicante, Murcia y Baleares.">
+    <link rel="icon" type="image/jpeg" href="img/divelsa.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/divelsa.png" alt="Divelsa - Distribución de Electrodomésticos" class="logo-img">
+                <img src="img/est_e_t21.png" alt="Euronics Tien21" class="logo-img logo-secondary">
+            </a>
+            
+            <nav class="nav" id="mainNav">
+                <a href="quienes-somos.html" class="nav-link">Quiénes somos</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="tiendas.html" class="nav-link active">Nuestras tiendas</a>
+                <a href="alianzas.html" class="nav-link">Alianzas</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="page-banner tiendas-banner">
+        <div class="page-banner-content">
+            <h1>Nuestras Tiendas</h1>
+            <p>Puntos de venta en el eje mediterráneo</p>
+        </div>
+    </section>
+
+    <!-- Contenido -->
+    <section class="page-content">
+        <div class="container">
+            <div class="tiendas-content">
+                <div class="tiendas-map">
+                    <div class="map-container">
+                        <div id="map-tiendas"></div>
+                        <div class="map-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot hq"></span>
+                                <span>Sede central</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot store"></span>
+                                <span>Euronics</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot tien21"></span>
+                                <span>Tien21</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tiendas-info">
+                    <div class="tiendas-region">
+                        <h4>Valencia</h4>
+                        <p class="tiendas-count"><i data-lucide="store"></i> 25 tiendas</p>
+                        <p class="tiendas-cities">Paterna (Sede), Valencia, Torrent, Gandia, Xàtiva, Cullera, Carlet, Quart de Poblet, Puzol, Sedaví...</p>
+                    </div>
+                    <div class="tiendas-region">
+                        <h4>Alicante</h4>
+                        <p class="tiendas-count"><i data-lucide="store"></i> 28 tiendas</p>
+                        <p class="tiendas-cities">Alicante, Elche, Elda, Torrevieja, Jávea, Teulada, Rojales, Petrer, Santa Pola, Benidorm...</p>
+                    </div>
+                    <div class="tiendas-region">
+                        <h4>Castellón</h4>
+                        <p class="tiendas-count"><i data-lucide="store"></i> 6 tiendas</p>
+                        <p class="tiendas-cities">Castellón de la Plana, Burriana, Vall de Uxó, Oropesa, Segorbe...</p>
+                    </div>
+                    <div class="tiendas-region">
+                        <h4>Murcia</h4>
+                        <p class="tiendas-count"><i data-lucide="store"></i> 10 tiendas</p>
+                        <p class="tiendas-cities">Alcantarilla, Cieza, Molina de Segura, Yecla, Totana, Los Alcázares, Mazarrón, Lorquí...</p>
+                    </div>
+                    <div class="tiendas-region">
+                        <h4>Almería</h4>
+                        <p class="tiendas-count"><i data-lucide="store"></i> 8 tiendas</p>
+                        <p class="tiendas-cities">Almería, Albox, Berja, Adra, Tabernas, La Mojonera, Garrucha, Huércal-Overa...</p>
+                    </div>
+                    <div class="tiendas-region">
+                        <h4>Albacete y Cuenca</h4>
+                        <p class="tiendas-count"><i data-lucide="store"></i> 6 tiendas</p>
+                        <p class="tiendas-cities">Albacete, Hellín, Casas-Ibáñez, Montealegre, Quintanar del Rey...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="img/divelsa.png" alt="Divelsa" class="logo-img footer-logo">
+                        <img src="img/est_e_t21.png" alt="Euronics Tien21" class="logo-img footer-logo-secondary">
+                    </a>
+                    <p>Distribución de electrodomésticos desde 1965. Líderes en el eje mediterráneo bajo las enseñas Euronics y Tien21.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/people/Euronics-Paterna/100063839807969/" target="_blank" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="https://www.instagram.com/euronics.valencia/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/electrodom-sticos-divelsa-s-a/" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="https://www.youtube.com/@euronicses" target="_blank" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="tiendas.html">Nuestras tiendas</a></li>
+                        <li><a href="alianzas.html">Alianzas</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i data-lucide="map-pin"></i> Carrer del Manyá, 22, Paterna</p>
+                    <p><i data-lucide="phone"></i> 961 34 30 52</p>
+                    <p><i data-lucide="mail"></i> info@divelsa.com</p>
+                    <p><i data-lucide="clock"></i> Lun-Vie: 9:00-14:00 / 16:30-19:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Divelsa. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-de-privacidad.html">Aviso legal</a>
+                    <a href="politica-de-privacidad.html">Política de privacidad</a>
+                    <a href="cookies.html">Política de cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

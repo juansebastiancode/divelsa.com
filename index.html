@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divelsa | Distribución de Electrodomésticos</title>
+    <meta name="description" content="Divelsa - Distribución de electrodomésticos desde 1965. Líderes en el eje mediterráneo bajo las enseñas Euronics y Tien21.">
+    <link rel="icon" type="image/jpeg" href="img/divelsa.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/divelsa.png" alt="Divelsa - Distribución de Electrodomésticos" class="logo-img">
+                <img src="img/est_e_t21.png" alt="Euronics Tien21" class="logo-img logo-secondary">
+            </a>
+            
+            <nav class="nav" id="mainNav">
+                <a href="quienes-somos.html" class="nav-link">Quiénes somos</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="tiendas.html" class="nav-link">Nuestras tiendas</a>
+                <a href="alianzas.html" class="nav-link">Alianzas</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel" id="carousel">
+        <div class="carousel-container">
+            <!-- Slide 1 -->
+            <div class="carousel-slide active">
+                <div class="slide-bg slide-bg-1"></div>
+                <div class="slide-content">
+                    <span class="slide-tag">Distribución de electrodomésticos</span>
+                    <h1 class="slide-title">Líderes en el <span class="highlight">eje mediterráneo</span></h1>
+                    <p class="slide-description">Somos un grupo consolidado con más de 50 tiendas y una amplia experiencia en el sector. Desde 1965.</p>
+                    <div class="slide-buttons">
+                        <a href="quienes-somos.html" class="btn btn-primary btn-large">Conócenos</a>
+                        <a href="contacto.html" class="btn btn-secondary btn-large">Contactar</a>
+                    </div>
+                </div>
+                <div class="slide-visual slide-map">
+                    <div id="map-hero"></div>
+                </div>
+            </div>
+            
+            <!-- Slide 2: Propuesta de valor -->
+            <div class="carousel-slide">
+                <div class="slide-bg slide-bg-2"></div>
+                <div class="slide-content">
+                    <span class="slide-tag">Nuestra propuesta de valor</span>
+                    <h1 class="slide-title">Actitud de <span class="highlight">servicio</span> al punto de venta</h1>
+                    <p class="slide-description">Profesionales comprometidos con tu éxito. Te acompañamos en cada paso para hacer crecer tu negocio con atención personalizada.</p>
+                    <div class="slide-buttons">
+                        <a href="servicios.html" class="btn btn-primary btn-large">Descubre nuestros servicios</a>
+                    </div>
+                </div>
+                <div class="slide-visual floating-icons">
+                    <div class="floating-icon icon-main"><i data-lucide="heart-handshake"></i></div>
+                    <div class="floating-icon icon-secondary"><i data-lucide="store"></i></div>
+                </div>
+            </div>
+            
+            <!-- Slide 3: Última entrada del blog -->
+            <div class="carousel-slide">
+                <div class="slide-bg slide-bg-3"></div>
+                <div class="slide-content">
+                    <span class="slide-tag">Blog</span>
+                    <h1 class="slide-title">Últimas <span class="highlight">novedades</span> del sector</h1>
+                    <p class="slide-description">Mantente al día con las últimas tendencias en electrodomésticos, tecnología y consejos para tu punto de venta.</p>
+                    <div class="slide-buttons">
+                        <a href="blog.html" class="btn btn-primary btn-large">Leer el blog</a>
+                    </div>
+                </div>
+                <div class="slide-visual floating-icons">
+                    <div class="floating-icon icon-main"><i data-lucide="newspaper"></i></div>
+                    <div class="floating-icon icon-secondary"><i data-lucide="lightbulb"></i></div>
+                </div>
+            </div>
+            
+            <!-- Slide 4: Call to Action - Contacto -->
+            <div class="carousel-slide">
+                <div class="slide-bg slide-bg-4"></div>
+                <div class="slide-content">
+                    <span class="slide-tag">¿Quieres unirte?</span>
+                    <h1 class="slide-title">Empieza a <span class="highlight">crecer</span> con nosotros</h1>
+                    <p class="slide-description">Únete a la red de distribución líder en el eje mediterráneo. Contacta con nosotros y te informamos sin compromiso.</p>
+                    <div class="slide-buttons">
+                        <a href="contacto.html" class="btn btn-primary btn-large">Contactar ahora</a>
+                        <a href="tel:961343052" class="btn btn-secondary btn-large">961 34 30 52</a>
+                    </div>
+                </div>
+                <div class="slide-visual floating-icons">
+                    <div class="floating-icon icon-main"><i data-lucide="mail"></i></div>
+                    <div class="floating-icon icon-secondary"><i data-lucide="phone"></i></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel Navigation -->
+        <div class="carousel-nav">
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventajas de asociarte -->
+    <section class="asociate">
+        <div class="container">
+            <div class="asociate-header">
+                <span class="section-tag">Únete a nosotros</span>
+                <h2 class="section-title">Ventajas de asociarte a Divelsa</h2>
+                <p class="section-subtitle">Somos un grupo consolidado con amplia experiencia en el sector. Descubre todo lo que podemos ofrecerte.</p>
+            </div>
+            <div class="ventajas-grid">
+                <div class="ventaja-card">
+                    <div class="ventaja-icon">
+                        <i data-lucide="package"></i>
+                    </div>
+                    <h4>Amplio surtido</h4>
+                    <p>Productos de las mejores marcas en las mejores condiciones de precio y servicio.</p>
+                </div>
+                <div class="ventaja-card">
+                    <div class="ventaja-icon">
+                        <i data-lucide="heart-handshake"></i>
+                    </div>
+                    <h4>Compromiso total</h4>
+                    <p>Servicio integral para potenciar tu negocio y ayudarte a crecer.</p>
+                </div>
+                <div class="ventaja-card">
+                    <div class="ventaja-icon">
+                        <i data-lucide="piggy-bank"></i>
+                    </div>
+                    <h4>Negocio rentable</h4>
+                    <p>Eliminamos los costes que te impiden ganar dinero desde el principio.</p>
+                </div>
+                <div class="ventaja-card">
+                    <div class="ventaja-icon">
+                        <i data-lucide="headset"></i>
+                    </div>
+                    <h4>Atención personalizada</h4>
+                    <p>Profesionales especialistas con amplia experiencia a tu disposición.</p>
+                </div>
+                <div class="ventaja-card">
+                    <div class="ventaja-icon">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <h4>Euronics Internacional</h4>
+                    <p>Pertenecemos a la mayor cadena de electrodomésticos de Europa.</p>
+                </div>
+                <div class="ventaja-card">
+                    <div class="ventaja-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <h4>Amplia experiencia</h4>
+                    <p>Larga trayectoria en el sector con profesionales capacitados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cifras -->
+    <section class="cifras">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">En números</span>
+                <h2 class="section-title">Divelsa en cifras</h2>
+            </div>
+            <div class="cifras-grid">
+                <div class="cifra-card">
+                    <div class="cifra-numero">+50</div>
+                    <p>Puntos de venta</p>
+                </div>
+                <div class="cifra-card">
+                    <div class="cifra-numero">1965</div>
+                    <p>Año de fundación</p>
+                </div>
+                <div class="cifra-card">
+                    <div class="cifra-numero">+35</div>
+                    <p>Países Euronics</p>
+                </div>
+                <div class="cifra-card">
+                    <div class="cifra-numero">+11.000</div>
+                    <p>Tiendas Euronics mundial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas -->
+    <section class="marcas">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">Marcas</span>
+                <h2 class="section-title">Trabajamos con las mejores marcas</h2>
+                <p class="section-subtitle">Distribuimos productos de los principales fabricantes de electrónica y electrodomésticos</p>
+            </div>
+            <div class="marcas-grid">
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/lg-electronics.svg" alt="LG">
+                    <span class="marca-name">LG</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/samsung-8.svg" alt="Samsung">
+                    <span class="marca-name">Samsung</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/bosch-1.svg" alt="Bosch">
+                    <span class="marca-name">Bosch</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Siemens-logo.svg" alt="Siemens">
+                    <span class="marca-name">Siemens</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/AEG_logo_new.svg" alt="AEG">
+                    <span class="marca-name">AEG</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://www.balay.es/etc/designs/global-indesignclient-component/clientlib-base/img/logo_balay.svg" alt="Balay">
+                    <span class="marca-name">Balay</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Electrolux_logo.svg" alt="Electrolux">
+                    <span class="marca-name">Electrolux</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Haier_logo.svg" alt="Haier">
+                    <span class="marca-name">Haier</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/hisense-1.svg" alt="Hisense">
+                    <span class="marca-name">Hisense</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/candy-2.svg" alt="Candy">
+                    <span class="marca-name">Candy</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/whirlpool-1.svg" alt="Whirlpool">
+                    <span class="marca-name">Whirlpool</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/teka.svg" alt="Teka">
+                    <span class="marca-name">Teka</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/beko.svg" alt="Beko">
+                    <span class="marca-name">Beko</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/miele-1.svg" alt="Miele">
+                    <span class="marca-name">Miele</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/philips-5.svg" alt="Philips">
+                    <span class="marca-name">Philips</span>
+                </div>
+                <div class="marca-card">
+                    <img src="https://cdn.worldvectorlogo.com/logos/sony-2.svg" alt="Sony">
+                    <span class="marca-name">Sony</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="img/divelsa.png" alt="Divelsa" class="logo-img footer-logo">
+                        <img src="img/est_e_t21.png" alt="Euronics Tien21" class="logo-img footer-logo-secondary">
+                    </a>
+                    <p>Distribución de electrodomésticos desde 1965. Líderes en el eje mediterráneo bajo las enseñas Euronics y Tien21.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/people/Euronics-Paterna/100063839807969/" target="_blank" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="https://www.instagram.com/euronics.valencia/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/electrodom-sticos-divelsa-s-a/" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="https://www.youtube.com/@euronicses" target="_blank" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="tiendas.html">Nuestras tiendas</a></li>
+                        <li><a href="alianzas.html">Alianzas</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i data-lucide="map-pin"></i> Carrer del Manyá, 22, Paterna</p>
+                    <p><i data-lucide="phone"></i> 961 34 30 52</p>
+                    <p><i data-lucide="mail"></i> info@divelsa.com</p>
+                    <p><i data-lucide="clock"></i> Lun-Vie: 9:00-14:00 / 16:30-19:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Divelsa. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-de-privacidad.html">Aviso legal</a>
+                    <a href="politica-de-privacidad.html">Política de privacidad</a>
+                    <a href="cookies.html">Política de cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

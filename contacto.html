@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Divelsa | Distribución de Electrodomésticos</title>
+    <meta name="description" content="Contacta con Divelsa. Estamos en Valencia y cubrimos el eje mediterráneo. Llámanos o envíanos un mensaje.">
+    <link rel="icon" type="image/jpeg" href="img/divelsa.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="img/divelsa.png" alt="Divelsa - Distribución de Electrodomésticos" class="logo-img">
+                <img src="img/est_e_t21.png" alt="Euronics Tien21" class="logo-img logo-secondary">
+            </a>
+            
+            <nav class="nav" id="mainNav">
+                <a href="quienes-somos.html" class="nav-link">Quiénes somos</a>
+                <a href="servicios.html" class="nav-link">Servicios</a>
+                <a href="tiendas.html" class="nav-link">Nuestras tiendas</a>
+                <a href="alianzas.html" class="nav-link">Alianzas</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="contacto.html" class="nav-link active">Contacto</a>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="page-banner contacto-banner">
+        <div class="page-banner-content">
+            <h1>Contacto</h1>
+            <p>Estamos aquí para ayudarte</p>
+        </div>
+    </section>
+
+    <!-- Contenido -->
+    <section class="page-content">
+        <div class="container">
+            <div class="contacto-grid">
+                <div class="contacto-map">
+                    <div id="map-contacto"></div>
+                </div>
+                <div class="contacto-info">
+                    <div class="contacto-item">
+                        <span class="contacto-icon">
+                            <i data-lucide="map-pin"></i>
+                        </span>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Parque Empresarial<br>Carrer del Manyá, 22<br>46980 Paterna, Valencia</p>
+                        </div>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="contacto-icon">
+                            <i data-lucide="phone"></i>
+                        </span>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>961 34 30 52</p>
+                        </div>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="contacto-icon">
+                            <i data-lucide="mail"></i>
+                        </span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@divelsa.com</p>
+                        </div>
+                    </div>
+                    <div class="contacto-item">
+                        <span class="contacto-icon">
+                            <i data-lucide="clock"></i>
+                        </span>
+                        <div>
+                            <h4>Horario</h4>
+                            <p>Lunes a Viernes:<br>9:00 - 14:00 / 16:30 - 19:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacto-form-section">
+                <h3>Envíanos un mensaje</h3>
+                <form class="contacto-form" id="contacto-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre y apellidos *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="asunto">Asunto</label>
+                            <input type="text" id="asunto" name="asunto">
+                        </div>
+                    </div>
+                    <div class="form-group full">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group full">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacidad-contacto" required>
+                            He leído y acepto la <a href="politica-de-privacidad.html">política de privacidad</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-large">Enviar mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="img/divelsa.png" alt="Divelsa" class="logo-img footer-logo">
+                        <img src="img/est_e_t21.png" alt="Euronics Tien21" class="logo-img footer-logo-secondary">
+                    </a>
+                    <p>Distribución de electrodomésticos desde 1965. Líderes en el eje mediterráneo bajo las enseñas Euronics y Tien21.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/people/Euronics-Paterna/100063839807969/" target="_blank" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="https://www.instagram.com/euronics.valencia/" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/electrodom-sticos-divelsa-s-a/" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="https://www.youtube.com/@euronicses" target="_blank" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="quienes-somos.html">Quiénes somos</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="tiendas.html">Nuestras tiendas</a></li>
+                        <li><a href="alianzas.html">Alianzas</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i data-lucide="map-pin"></i> Carrer del Manyá, 22, Paterna</p>
+                    <p><i data-lucide="phone"></i> 961 34 30 52</p>
+                    <p><i data-lucide="mail"></i> info@divelsa.com</p>
+                    <p><i data-lucide="clock"></i> Lun-Vie: 9:00-14:00 / 16:30-19:00</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Divelsa. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="politica-de-privacidad.html">Aviso legal</a>
+                    <a href="politica-de-privacidad.html">Política de privacidad</a>
+                    <a href="cookies.html">Política de cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
