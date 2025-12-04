@@ -2676,6 +2676,10 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
     
+    .cifras-grid.cifras-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .marcas-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -2748,7 +2752,80 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
     .header-container {
-        height: 140px;
+        height: 80px;
+    }
+    
+    .logo-img {
+        height: 50px !important;
+    }
+    
+    .logo-secondary {
+        height: 25px !important;
+    }
+    
+    .hero-carousel {
+        min-height: 550px;
+    }
+    
+    .carousel-slide {
+        padding: 100px 16px 80px;
+    }
+    
+    .slide-title {
+        font-size: 1.6rem;
+    }
+    
+    .slide-description {
+        font-size: 1rem;
+    }
+    
+    .slide-visual.floating-icons {
+        width: 200px;
+        height: 180px;
+    }
+    
+    .floating-icon.icon-main svg {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .floating-icon.icon-secondary svg {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .floating-label {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    #map-hero {
+        height: 280px;
+    }
+    
+    .slide-visual.slide-map {
+        height: 250px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cifras-grid.cifras-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .cifra-numero {
+        font-size: 2.5rem;
+    }
+    
+    .cifra-card {
+        padding: 24px 16px;
     }
     
     .about-banner,
@@ -2756,7 +2833,19 @@ h1, h2, h3, h4, h5, h6 {
     .tiendas-banner,
     .alianzas-banner,
     .contacto-banner {
-        height: 220px;
+        height: 200px;
+    }
+    
+    .page-banner {
+        height: 200px;
+    }
+    
+    .page-banner-content h1 {
+        font-size: 2rem;
+    }
+    
+    .page-banner-content p {
+        font-size: 1rem;
     }
     
     .about-banner-content h2,
@@ -2764,7 +2853,7 @@ h1, h2, h3, h4, h5, h6 {
     .tiendas-banner-content h2,
     .alianzas-banner-content h2,
     .contacto-banner-content h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .valores-grid {
@@ -2773,28 +2862,59 @@ h1, h2, h3, h4, h5, h6 {
     
     .marcas-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        gap: 12px;
     }
     
     .marca-card {
-        padding: 24px 16px;
-        min-height: 140px;
+        padding: 20px 12px;
+        min-height: 100px;
     }
     
     .marca-card img {
-        height: 50px;
-        max-width: 120px;
+        height: 40px;
+        max-width: 100px;
     }
     
     .marca-name {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    .ventaja-card {
+        padding: 24px;
     }
     
     .alianza-section {
-        padding: 28px;
+        padding: 24px;
     }
     
     .contacto-form-section {
-        padding: 28px;
+        padding: 24px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .btn-large {
+        padding: 12px 24px;
+    }
+    
+    .dot {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .dot.active {
+        width: 40px;
+    }
+    
+    .map-legend {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .legend-item {
+        font-size: 0.95rem;
     }
 }
