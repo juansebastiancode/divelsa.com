@@ -1548,6 +1548,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Servicios ===== */
 .servicios {
     padding-bottom: 100px;
+    background: #e6ebf2;
 }
 
 .servicios-grid {
@@ -1560,7 +1561,8 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--white);
     padding: 36px;
     border-radius: var(--radius-lg);
-    border: 1px solid var(--gray-200);
+    border: 1px solid #e0e4eb;
+    box-shadow: var(--shadow-md);
     transition: var(--transition);
 }
 
