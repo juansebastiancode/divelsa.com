@@ -693,7 +693,7 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 28px;
     font-weight: 600;
     font-size: 0.95rem;
-    border-radius: var(--radius-md);
+    border-radius: 999px;
     transition: var(--transition);
 }
 
@@ -710,7 +710,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary {
-    background: var(--white);
+    background: transparent;
     color: var(--primary);
     border: 2px solid var(--primary);
 }
