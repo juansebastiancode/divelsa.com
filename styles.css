@@ -202,6 +202,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
     align-items: center;
     padding: 120px 24px 80px;
     max-width: 1200px;
@@ -257,9 +258,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide-title {
-    font-size: clamp(2.8rem, 5.5vw, 4rem);
+    font-size: clamp(3rem, 6vw, 4.2rem);
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     color: var(--dark);
 }
 
@@ -268,10 +269,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .slide-description {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     color: var(--gray-500);
     max-width: 520px;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     line-height: 1.8;
 }
 
