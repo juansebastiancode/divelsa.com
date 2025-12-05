@@ -193,7 +193,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mapa de Tiendas - Zona Levante
         const mapTiendas = document.getElementById('map-tiendas');
         if (mapTiendas) {
-            const tiendasMap = L.map('map-tiendas', { attributionControl: false }).setView([39.5, -1.0], 6);
+            const tiendasMap = L.map('map-tiendas', { 
+                attributionControl: false,
+                zoomControl: true,
+                scrollWheelZoom: false,
+                doubleClickZoom: false,
+                touchZoom: false
+            }).setView([38.9, -0.5], 7);
+
+            // Permitir zoom solo con Ctrl + scroll dentro del mapa
+            mapTiendas.addEventListener('wheel', (evt) => {
+                if (!evt.ctrlKey) return;
+                evt.preventDefault();
+                if (evt.deltaY < 0) {
+                    tiendasMap.zoomIn();
+                } else {
+                    tiendasMap.zoomOut();
+                }
+            }, { passive: false });
             
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 attribution: '© OpenStreetMap contributors'
