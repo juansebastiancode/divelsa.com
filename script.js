@@ -913,16 +913,23 @@ style.textContent = `
         top: 100%;
         left: 0;
         right: 0;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        background: #ffffff;
         flex-direction: column;
         padding: 24px 20px 32px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         animation: fadeIn 0.3s ease;
+        border-top: 1px solid rgba(0,0,0,0.1);
     }
     
     .nav.active .nav-link {
         padding: 18px 20px;
         font-size: 1.1rem;
+        color: #1a4f8b;
+    }
+    
+    .nav.active .nav-link:hover {
+        background: #f3f4f6;
+        border-radius: 8px;
     }
     
     .menu-toggle.active span:nth-child(1) {
