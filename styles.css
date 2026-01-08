@@ -3105,6 +3105,24 @@ h1, h2, h3, h4, h5, h6 {
     
     .section-subtitle {
         font-size: 1rem;
+        text-align: left;
+    }
+    
+    .section-header.center {
+        text-align: left;
+    }
+    
+    .asociate {
+        padding: 40px 0;
+    }
+    
+    .asociate-header {
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    
+    .cifras {
+        padding: 40px 0;
     }
     
     .cifras-grid.cifras-4 {
