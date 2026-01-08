@@ -2274,10 +2274,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contacto-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--primary-light);
-    border-radius: var(--radius-md);
+    width: 64px;
+    height: 64px;
+    background: transparent;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2286,8 +2286,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .contacto-icon i,
 .contacto-icon svg {
-    width: 44px !important;
-    height: 44px !important;
+    width: 32px !important;
+    height: 32px !important;
     color: var(--primary);
 }
 
