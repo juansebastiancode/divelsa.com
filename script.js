@@ -1005,8 +1005,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 clearTimeout(retryTimeout);
             }
             // Si es una imagen local de Samsung o Whirlpool, agregar clase para hacerla más grande
-            if (this.src.includes('img/') && (alt === 'samsung' || alt === 'whirlpool')) {
+            const imgSrc = this.src.toLowerCase();
+            if ((imgSrc.includes('img/samsung') || imgSrc.includes('img/whirpool')) && (alt === 'samsung' || alt === 'whirlpool')) {
                 this.classList.add('logo-large');
+                console.log('Agregada clase logo-large a:', alt, this.src);
             }
             // Asegurarse de que no hay nombre de marca si la imagen cargó
             const existingName = this.parentElement.querySelector('.marca-name:not(.marca-name-permanent)');

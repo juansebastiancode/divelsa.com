@@ -1491,8 +1491,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .marca-card img.logo-large {
-    max-width: 180px;
-    height: 80px;
+    max-width: 220px !important;
+    height: 100px !important;
+    width: auto !important;
 }
 
 .marca-card:hover img {
@@ -3043,8 +3044,9 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .marca-card img.logo-large {
-        height: 50px;
-        max-width: 130px;
+        height: 70px !important;
+        max-width: 160px !important;
+        width: auto !important;
     }
     
     .marca-name {
