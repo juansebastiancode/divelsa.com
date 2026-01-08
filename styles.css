@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 15px;
-    height: 100px;
+    height: 90px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -183,9 +183,9 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Hero Carousel ===== */
 .hero-carousel {
     position: relative;
-    height: calc(100vh - 100px);
+    height: 100vh;
     min-height: 600px;
-    margin-top: 100px;
+    margin-top: 0;
     overflow: hidden;
 }
 
@@ -204,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 1fr;
     column-gap: 40px;
     align-items: center;
-    padding: 120px 24px 80px;
+    padding: 150px 24px 80px;
     max-width: 1200px;
     margin: 0 auto;
     left: 50%;
@@ -638,13 +638,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Carousel Navigation */
 .carousel-nav {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
+    display: none;
     align-items: center;
     gap: 20px;
     z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-dots {
@@ -774,6 +778,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: -60px;
     position: relative;
     z-index: 10;
+    background: var(--gray-50);
 }
 
 .highlights-grid {
@@ -824,7 +829,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-light) 0%, #e0ecf7 100%);
+    background: var(--primary);
 }
 
 .highlight-img i,
@@ -835,8 +840,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .highlight-img img {
-    max-width: 80%;
-    max-height: 120px;
+    max-width: 90%;
+    max-height: 150px;
     object-fit: contain;
 }
 
@@ -985,16 +990,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .cifra-card {
     text-align: center;
-    padding: 40px 24px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: var(--radius-lg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    border: none;
     transition: var(--transition);
 }
 
 .cifra-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
+    background: transparent;
+    transform: none;
 }
 
 .cifra-numero {
@@ -1100,7 +1105,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     text-align: center;
     color: var(--white);
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .page-banner-content h1 {
