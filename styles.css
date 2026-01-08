@@ -234,9 +234,9 @@ h1, h2, h3, h4, h5, h6 {
 .slide-bg-3,
 .slide-bg-4 {
     background: 
-        radial-gradient(circle at 70% 20%, rgba(26, 79, 139, 0.25) 0%, transparent 50%),
-        radial-gradient(circle at 20% 80%, rgba(42, 157, 143, 0.15) 0%, transparent 45%),
-        linear-gradient(135deg, #d4e4f7 0%, #e8f0f8 40%, #f0f7f6 70%, #f9fafb 100%);
+        radial-gradient(circle at 70% 20%, rgba(26, 79, 139, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(42, 157, 143, 0.08) 0%, transparent 45%),
+        linear-gradient(135deg, #eef3f9 0%, #f3f6fb 40%, #f7faf9 70%, #ffffff 100%);
 }
 
 .slide-content {
@@ -672,8 +672,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dot {
-    width: 18px;
-    height: 18px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: var(--gray-300);
     transition: var(--transition);
@@ -687,8 +687,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .dot.active {
     background: var(--primary);
-    width: 50px;
-    border-radius: 9px;
+    width: 32px;
+    border-radius: 10px;
 }
 
 /* ===== Buttons ===== */
@@ -3129,12 +3129,12 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .dot {
-        width: 14px;
-        height: 14px;
+        width: 10px;
+        height: 10px;
     }
     
     .dot.active {
-        width: 40px;
+        width: 24px;
     }
     
     .map-legend {
