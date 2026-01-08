@@ -1,0 +1,223 @@
+WEB CORPORATIVA DIVELSA
+
+Menú: 
+
+1.	Quienes somos
+2.	Servicios
+3.	Nuestras tiendas
+4.	Alianzas
+5.	Blog 
+6.	Contacto
+
+
+Home
+
+•	Carrusel con diferentes banners
+o	Claim+ mapa de zonas de actuación. Sugerencia de claim: Líderes en el eje mediterráneo.
+o	Propuesta de valor/ventaja competitiva+ imagen representativa. Sugerencia de propuesta de valor: actitud de servicioal punto de venta.
+o	Enlace a la última entrada del blog + imagen del post
+o	Enlace al formulario de contacto (calltoaction) + imagen de experiencia de usuario
+
+Falta imagen del mapa con las zonas de actuación, propuesta de valor o ventaja competitiva y eslogan (si tienen)
+
+•	3 destacados (imagen + subtítulo)
+o	Alianzas + enlace a “nuestras alianzas”
+o	Encuentra tu tienda + enlace a “nuestras tiendas”
+o	Asóciate + enlace a landing page de captación de leadscon ventajas (imagen + título sobre la imagen + texto). Ventajas:
+1.	Somos un grupo consolidado con más de x tiendas y una amplia experiencia en el sector.
+2.	Ofrecemos un amplio surtido de productos de las mejores marcas en las mejores condiciones.
+3.	Proporcionamos un servicio integral para conseguir que tu negocio progrese de manera ininterrumpida.
+4.	Ponemos a tu disposición las herramientas necesarias para que logres crecer y vender más.
+5.	Estamos inmersos en un proceso de aprendizaje continuo y mejora constante para ser cada día más eficaces. 
+6.	Trabajamos y nos esforzamos por incrementar el alcance y el impacto de nuestras acciones.
+
+
+•	Divelsa en cifras (infografías)
+o	Número de tiendas
+o	Líderes en el eje mediterráneo
+o	Años de experiencia
+o	Vídeo corporativo
+
+Falta el número de tiendas y el vídeo corporativo (si tienen)
+
+•	Nuestras marcas
+o	Subtítulo: las mejores marcas están en Divelsa
+o	Logos de marcas de electrodomésticos (sacar las marcas de la web de Euronics: https://www.euronics.es/marcas.html). Se puede dividir por categorías como en Euronics y Tien21: gran electrodoméstico, imagen y sonido, telefonía, pequeño electrodoméstico, climatización y cuidado personal
+
+•	Servicios destacados
+o	Imagen servicio 1 (producto)
+o	Imagen servicio 2 (asesoramiento al punto de venta)
+o	Imagen servicio 3 (identificación corporativa)
+
+•	Suscripción a la newsletter
+o	Texto: suscríbete a nuestra newsletter para conocer todas las novedades, ofertas y promociones
+o	Formulario
+o	Política de privacidad
+
+Faltan la política de privacidad
+
+1.	Quienes somos
+
+Banner donde se vea la marca Divelsa: profesionales, tiendas o cualquier imagen con la esencia de la marca
+
+Introducción (modificar en función de la información sobre la historia):
+
+Divelsa es una empresa de distribución de electrodomésticos fundada en 1965 que nació con el objetivo de establecer una relación cercana con los clientes, satisfacer todas sus necesidades en el momento y proporcionarle una experiencia de usuario inspiradora y acogedora basada en la proximidad y la accesibilidad. Para lograrlo, nuestros profesionales garantizan un servicio y un asesoramiento personalizados y se esfuerzan por ofrecer la mejor solución para las necesidades de los consumidores, siempre al mejor precio y en las mejores condiciones.
+
+Nuestra zona de actuación es el área de Levante de la península y Baleares, donde distribuimos electrodomésticos bajo la enseña Euronics, y la provincia de Valencia, en la que trabajamos bajo la enseña Tien21.
+Euronics España es una cadena de distribución de electrodomésticos con sede en Madrid que se originó en 1989. Opera como Central de Compras, agrupando más de 350 puntos de venta repartidos por todo el territorio nacional. Su larga trayectoria, su dilatada experiencia en el sector y su amplia expansión la convierten en una tienda de electrodomésticos y electrónica de referencia en la industria. 
+
+Forma parte de Euronics Internacional, la mayor cadena de electrodomésticos de Europa, que actualmente está presente en más de 35 países y dispone de más de 11.000 puntos de venta. 
+
+Tien 21 es la mayor cadena de tiendas especializada en la venta de electrodomésticos y productos de electrónica de consumo. Originada en 1989, dispone en la actualidad de más de 900 puntos de venta en España y Portugal. Su larga trayectoria, su dilatada experiencia en el sector y su amplia expansión la convierten en una tienda de electrodomésticos y electrónica de referencia en la industria.
+
+Nuestras fortalezas (imagen + texto en filas de 3). 
+
+•	Amplio surtido. Ofrecemos un amplio surtido de productos de las mejores marcas en las mejores condiciones de precio y servicio.
+•	Comprometidos contigo. Proporcionamos un servicio completo para potenciar tu negocio y ayudarte a crecer poniendo el foco en el punto de venta.
+•	Negocio rentable. Eliminamos los costes que te impiden ganar dinero para que obtengas beneficios desde el principio.
+•	Atención personalizada. Nuestro equipo de profesionales, que son especialistas y cuentan con una amplia experiencia, te dan toda la información que necesitas.
+•	Miembro de Euronics Internacional. Pertenecemos a la mayor cadena de electrodomésticos de Europa, que está presente en 35 países con más de 11.000 puntos de venta. 
+•	Amplia experiencia. Contamos con una larga trayectoria en el sector y con profesionales capacitados para ofrecer el mejor servicio.
+
+Nuestros valores:
+
+•	Valor 1 (compromiso): imagen + texto breve. Nos orientamos a ti y ponemos a tu disposición un servicio integral que te ayude a crecer.
+•	Valor 2 (transparencia): imagen + texto breve. Somos claros en la descripción de nuestros servicios y te ofrecemos toda la información para que tomes la mejor decisión.
+•	Valor 3 (calidad): imagen + texto breve. Nuestro proceso de mejora continua nos permiteproporcionartelos mejores productos y servicios en las mejores condiciones.
+•	Valor 4 (trabajo en equipo): imagen + texto breve. Trabajamos de forma coordinada con el fin de optimizar nuestras habilidades y alcanzar los objetivos planteados.
+•	Valor 5 (innovación): imagen + texto breve. Conocemos todas las novedades del sector y estamos en un proceso constante de actualización y búsqueda de oportunidades.
+
+
+Nuestro equipo (fotografías de los miembros del equipo + nombre + cargo en filas de 3)
+
+Falta la imagen donde se vea la marca Divelsa (profesionales, tiendas de Euronics y Tien21, almacenes, etc.), la historia de Divelsa e información sobre los miembros del equipo (foto, nombre, cargo)
+
+2.	Servicios
+
+Banner con una imagen que haga referencia a la cercanía con el cliente
+
+Nuestros servicios (imagen + título + texto en filas de 3):
+
+•	Servicio 1(producto): imagen + título + texto
+
+Ponemos a tu disposición un amplio surtido de productos de las mejores marcas en las mejores condiciones de precio y servicio.
+
+•	Servicio 2 (valor añadido): imagen + título + texto 
+
+Te ofrecemos servicios de valor añadido, como los siguientes:
+
+Extensión de garantía: Todos nuestros productos tienen 2 años de garantía oficial del fabricante. Se puede alargar 3 años más gracias a nuestro servicio de garantía extendida para alcanzar los 5 años de cobertura. De esta manera, el cliente disfrutará de una tranquilidad absoluta durante un largo periodo de tiempo. 
+
+Durante los 3 años de garantía extendida, el electrodoméstico estará protegido con:
+
+-	Reparación de las averías: incluye mano de obra, piezas, desplazamientos, retirada y entrega del electrodoméstico.
+-	Sin límite de reparación durante este período. 
+
+*La garantía extendida no cubre los equipos destinados a un uso profesional. 
+
+Financiación: 
+
+Programa de gestión:
+
+•	Servicio 3 (asesoramiento al punto de venta): imagen + título + texto
+
+Contamos con profesionales apasionados y capacitados que teproporcionan una atención personalizada y un servicio integral óptimo. Resuelven tus dudas y te dan toda la información que necesitas.
+
+
+•	Servicio 4 (identificación corporativa): imagen + título + texto
+
+Te ofrecemos soluciones de identificación exterior y adaptación del punto de venta con soportes de comunicación como portaprecios, señalización de estantería, vinilos, portaetiquetas, stopper, etc.
+
+•	Servicio 5 (marketing): imagen + título + texto
+
+Distribuimos folletos y realizamos merchandising, como carteles para el punto de venta y material textil.
+
+3.	Nuestras tiendas
+
+Banner con una imagen de una tienda Euronics y una tienda Tien21
+
+Ubicación y puntos de venta
+
+Imagen del mapa + icono de ubicación señalando la sede + puntos señalando los puntos de venta
+[En caso de que tengan muchos puntos de venta, se pueden dividir por comunidades y provincias, como en Euronics. Al entrar en cada provincia, se mostraría la ubicación de cada punto de venta]
+
+Falta la imagen de una tienda Euronics y una tienda Tien21 y los datos sobre los puntos de venta (número y ubicación) 
+
+4.	Alianzas
+
+Banner con una imagen referida a la colaboración/alianzas
+
+Logos de Sinersis y Euronics Internacional
+
+Sinersis
+
+Historia
+
+Euronics España y Tien 21 pertenecen a Sinersis, grupo empresarial con más de 2.000 puntos de venta en España y más de 11.000 en Europa. Tienen una tienda a menos de 15 minutos del 98 % de la población española, por lo que son capaces de llegar a toda la población española, independientemente del lugar donde se encuentre. Esta es la razón por la que son la red de comerciantes de electrodomésticos líder en España.
+
+Sinersis forma a sus profesionales para que estén al día de las últimas novedades del sector, ofrece las últimas tendencias en diseño de electrodomésticos y de hogares, y pone a disposición de los usuarios electrodomésticos energéticamente eficientes y respetuosos con el medio ambiente. 
+
+Valores
+
+Los valores de Sinersis, que ayudan a definir qué hacen y cómo lo hacen, son los siguientes (imagen + subtítulo + texto):
+
+o	Progreso: sus 30 años de trayectoria les ha permitido evolucionar de un grupo de compra a un grupo de ventas y servicios.
+o	Equipo: conformado por personas con diferentes especialidades que trabajan de forma coordinada para optimizar las habilidades del equipo en conjunto y alcanzar los objetivos planteados.
+o	Experiencia: el equipo de Sinersis conoce en profundidad el sector de los electrodomésticos, razón por la cual son capaces de aportar soluciones concretas a los nuevos retos que se les plantean. 
+
+Euronics Internacional
+
+Historia
+
+Sinersis es miembro de Euronics Internacional, el mayor grupo de tiendas de electrodomésticos de Europa, que fue fundado en 1990 por 5 empresarios. Su objetivo es ofrecer productos innovadores a los consumidores a través de un enfoque omnicanal. Actualmente está presente en más de 35 países con más de 11.000 puntos de venta y más de 50.000 empleados.Todo ello les permite ofrecer siempre las últimas innovaciones del sector, la mejor relación calidad-precio, ofertas exclusivas y novedades.
+
+Banner con el mapa azul de Euronics señalando los países donde está presente
+
+ 
+
+Falta información sobre la historia de Sinersis y Euronics Internacional (en caso de que se quiera ampliar) y el mapa azul de Euronics en alta calidad
+
+
+5.	Blog
+
+*Crear un nombre para el blog o poner simplemente Blog de Divelsa
+
+Destacar categorías en la parte superiorcon letra blanca sobre color y añadir lupa de búsqueda
+
+ 
+
+•	Estilo de vida
+•	Gestión
+•	Tecnología
+•	Noticias/novedades 
+
+6.	Contacto
+
+Banner con una imagen de atención al cliente
+
+Datos de contacto
+
+•	Mapa con ubicación (izquierda)
+•	Horario, teléfono y correo (derecha)
+
+Formulario de contacto
+
+•	Nombre y apellidos
+•	Teléfono
+•	Email
+•	Asunto/comentario
+•	Captcha
+•	Política de privacidad
+
+Footer:
+
+o	Logo
+o	Enlaces a redes sociales (en caso de que quieran tener presencia en ellas) 
+o	Dirección + contacto + horario
+o	Newsletter (suscripción) + política de privacidad
+o	Documentos legales: condiciones, política de privacidad, política de cookies
+
+Falta material de identidad visual corporativa (manual de Divelsa y, si no tienen, logo en alta calidad), datos de contacto (ubicación, horario, teléfono, correo) y documentos legales (aparte de la política de privacidad, las condiciones, la política de cookies y el aviso legal)
+
+
