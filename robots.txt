@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.divelsa.com/sitemap.xml
+
+# Bloquear archivos y directorios no relevantes
+Disallow: /img/
+Disallow: /*.txt$
+Disallow: /*.js$
+
