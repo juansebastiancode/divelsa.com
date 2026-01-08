@@ -963,3 +963,41 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// ===== Handle brand logos loading =====
+document.addEventListener('DOMContentLoaded', function() {
+    const marcaImages = document.querySelectorAll('.marca-card img');
+    
+    marcaImages.forEach((img) => {
+        const originalSrc = img.src;
+        const alt = img.alt;
+        let hasLoaded = false;
+        let errorCount = 0;
+        
+        // Marcar cuando la imagen carga correctamente
+        img.addEventListener('load', function() {
+            hasLoaded = true;
+            this.style.opacity = '1';
+        });
+        
+        // Solo manejar errores si la imagen realmente falla
+        img.addEventListener('error', function() {
+            errorCount++;
+            
+            // Si es el primer error, intentar recargar con timestamp
+            if (errorCount === 1 && !hasLoaded) {
+                const separator = originalSrc.includes('?') ? '&' : '?';
+                this.src = originalSrc + separator + '_=' + Date.now();
+            } else if (errorCount >= 2 && !hasLoaded) {
+                // Solo ocultar si realmente falló después de varios intentos
+                this.style.display = 'none';
+                if (!this.parentElement.querySelector('.marca-name') && alt) {
+                    const marcaName = document.createElement('span');
+                    marcaName.className = 'marca-name';
+                    marcaName.textContent = alt.toUpperCase();
+                    this.parentElement.appendChild(marcaName);
+                }
+            }
+        });
+    });
+});
+
