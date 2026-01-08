@@ -29,6 +29,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- Datos estructurados: página de contacto -->
     <script type="application/ld+json">
@@ -131,7 +132,7 @@
 
             <div class="contacto-form-section">
                 <h3>Envíanos un mensaje</h3>
-                <form class="contacto-form" id="contacto-form">
+                <form class="contacto-form" id="contacto-form" action="https://formspree.io/f/xaqnrvwq" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nombre">Nombre y apellidos *</label>
@@ -147,10 +148,6 @@
                             <label for="email">Email *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
-                        <div class="form-group">
-                            <label for="asunto">Asunto</label>
-                            <input type="text" id="asunto" name="asunto">
-                        </div>
                     </div>
                     <div class="form-group full">
                         <label for="mensaje">Mensaje *</label>
@@ -162,6 +159,10 @@
                             He leído y acepto la <a href="politica-de-privacidad.html">política de privacidad</a>
                         </label>
                     </div>
+                    <div class="form-group full">
+                        <div class="g-recaptcha" data-sitekey="6LcaL0QsAAAAAML4vn_Qug48eeQIWUGi_I-56Lhx"></div>
+                    </div>
+                    <div id="form-message" class="form-message" style="display: none;"></div>
                     <button type="submit" class="btn btn-primary btn-large">Enviar mensaje</button>
                 </form>
             </div>

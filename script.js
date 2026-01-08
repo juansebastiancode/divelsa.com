@@ -712,20 +712,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ===== Contact Form with Mailto =====
+    // ===== Contact Form with Formspree =====
     const contactForm = document.querySelector('#contacto-form');
+    const formMessage = document.getElementById('form-message');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
             // Get form values
             const nombre = contactForm.querySelector('#nombre');
             const telefono = contactForm.querySelector('#telefono');
             const email = contactForm.querySelector('#email');
-            const asunto = contactForm.querySelector('#asunto');
             const mensaje = contactForm.querySelector('#mensaje');
             const privacy = contactForm.querySelector('#privacidad-contacto');
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
             
             let isValid = true;
             
@@ -751,25 +752,82 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (!privacy.checked) {
-                alert('Debes aceptar la política de privacidad');
+                showFormMessage('Debes aceptar la política de privacidad', 'error');
+                isValid = false;
+            }
+            
+            // Validar reCAPTCHA
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                showFormMessage('Por favor, completa el reCAPTCHA', 'error');
                 isValid = false;
             }
             
             if (isValid) {
-                // Build mailto link
-                const mailtoEmail = 'info@divelsa.com';
-                const subject = encodeURIComponent(asunto.value.trim() || 'Contacto desde la web');
-                const body = encodeURIComponent(
-                    `Nombre: ${nombre.value.trim()}\n` +
-                    `Teléfono: ${telefono.value.trim()}\n` +
-                    `Email: ${email.value.trim()}\n\n` +
-                    `Mensaje:\n${mensaje.value.trim()}`
-                );
+                // Disable submit button
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Enviando...';
+                formMessage.style.display = 'none';
                 
-                // Open mailto
-                window.location.href = `mailto:${mailtoEmail}?subject=${subject}&body=${body}`;
+                // Prepare form data
+                const formData = new FormData(contactForm);
+                formData.append('_replyto', email.value);
+                formData.append('_subject', 'Mensaje del formulario divelsa.com');
+                
+                // Format message with all fields
+                const formattedMessage = `Nombre: ${nombre.value.trim()}\nTeléfono: ${telefono.value.trim()}\nEmail: ${email.value.trim()}\n\nMensaje:\n${mensaje.value.trim()}`;
+                formData.set('mensaje', formattedMessage);
+                
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        showFormMessage('¡Mensaje enviado correctamente! Te responderemos pronto.', 'success');
+                        contactForm.reset();
+                    } else {
+                        const data = await response.json();
+                        if (data.errors) {
+                            showFormMessage('Error al enviar el mensaje. Por favor, inténtalo de nuevo.', 'error');
+                        } else {
+                            showFormMessage('Error al enviar el mensaje. Por favor, inténtalo de nuevo.', 'error');
+                        }
+                    }
+                } catch (error) {
+                    showFormMessage('Error de conexión. Por favor, inténtalo de nuevo más tarde.', 'error');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Enviar mensaje';
+                }
             }
         });
+    }
+    
+    function showFormMessage(message, type) {
+        if (formMessage) {
+            formMessage.textContent = message;
+            formMessage.className = `form-message ${type}`;
+            formMessage.style.display = 'block';
+            
+            if (type === 'success') {
+                formMessage.style.color = '#10b981';
+                formMessage.style.backgroundColor = '#d1fae5';
+                formMessage.style.padding = '12px 16px';
+                formMessage.style.borderRadius = '8px';
+                formMessage.style.marginBottom = '20px';
+            } else {
+                formMessage.style.color = '#ef4444';
+                formMessage.style.backgroundColor = '#fee2e2';
+                formMessage.style.padding = '12px 16px';
+                formMessage.style.borderRadius = '8px';
+                formMessage.style.marginBottom = '20px';
+            }
+        }
     }
 
     // ===== Blog Links - Página en construcción =====
