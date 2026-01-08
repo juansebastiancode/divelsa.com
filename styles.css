@@ -1490,6 +1490,11 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
 }
 
+.marca-card img.logo-large {
+    max-width: 180px;
+    height: 80px;
+}
+
 .marca-card:hover img {
     transform: scale(1.1);
 }
@@ -1502,6 +1507,10 @@ h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: var(--transition);
+}
+
+.marca-name.whirlpool-large {
+    font-size: 1.5rem;
 }
 
 .marca-card:hover .marca-name {
@@ -3031,6 +3040,11 @@ h1, h2, h3, h4, h5, h6 {
     .marca-card img {
         height: 40px;
         max-width: 100px;
+    }
+    
+    .marca-card img.logo-large {
+        height: 50px;
+        max-width: 130px;
     }
     
     .marca-name {

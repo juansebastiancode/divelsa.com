@@ -963,13 +963,34 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// ===== Handle brand logos loading =====
+// ===== Handle brand logos loading with local fallback =====
 document.addEventListener('DOMContentLoaded', function() {
     const marcaImages = document.querySelectorAll('.marca-card img');
     
+    // Mapa de nombres de archivo locales (directamente en img/)
+    const localImages = {
+        'lg': 'img/lg.webp',
+        'samsung': 'img/samsung.png',
+        'bosch': 'img/bosch.png',
+        'siemens': 'img/siemens.png',
+        'aeg': 'img/aeg.png',
+        'balay': 'img/balay.png',
+        'electrolux': 'img/electrolux.png',
+        'haier': 'img/haier.png',
+        'hisense': 'img/hisense.png',
+        'candy': 'img/candy.svg',
+        'whirlpool': 'img/whirpool.png',
+        'teka': 'img/teka.png',
+        'beko': 'img/beko.png',
+        'miele': 'img/miele.png',
+        'philips': 'img/philips.png',
+        'sony': 'img/sony.svg'
+    };
+    
     marcaImages.forEach((img) => {
         const originalSrc = img.src;
-        const alt = img.alt;
+        const alt = img.alt.toLowerCase();
+        const localSrc = localImages[alt];
         let hasLoaded = false;
         let errorCount = 0;
         let retryTimeout = null;
@@ -983,6 +1004,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (retryTimeout) {
                 clearTimeout(retryTimeout);
             }
+            // Si es una imagen local de Samsung o Whirlpool, agregar clase para hacerla más grande
+            if (this.src.includes('img/') && (alt === 'samsung' || alt === 'whirlpool')) {
+                this.classList.add('logo-large');
+            }
             // Asegurarse de que no hay nombre de marca si la imagen cargó
             const existingName = this.parentElement.querySelector('.marca-name:not(.marca-name-permanent)');
             if (existingName) {
@@ -990,14 +1015,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Solo manejar errores si la imagen realmente falla
+        // Manejar errores con fallback a local
         img.addEventListener('error', function() {
             // Si ya cargó antes, no hacer nada
             if (hasLoaded) return;
             
             errorCount++;
             
-            // Si es el primer error, intentar recargar con timestamp después de un pequeño delay
+            // Si es el primer error, intentar recargar con timestamp
             if (errorCount === 1) {
                 retryTimeout = setTimeout(() => {
                     if (!hasLoaded) {
@@ -1005,13 +1030,21 @@ document.addEventListener('DOMContentLoaded', function() {
                         this.src = originalSrc + separator + '_=' + Date.now();
                     }
                 }, 500);
-            } else if (errorCount >= 2) {
-                // Solo ocultar y mostrar nombre si realmente falló después de varios intentos
+            } else if (errorCount === 2 && localSrc) {
+                // Si falla de nuevo, intentar con imagen local
+                // La clase logo-large se agregará en el evento 'load' cuando la imagen local se cargue
+                this.src = localSrc;
+            } else if (errorCount >= 3) {
+                // Si todo falla, mostrar el nombre de la marca
                 if (!hasLoaded) {
                     this.style.display = 'none';
                     if (!this.parentElement.querySelector('.marca-name') && alt) {
                         const marcaName = document.createElement('span');
                         marcaName.className = 'marca-name';
+                        // Agregar clase especial para Whirlpool
+                        if (alt === 'whirlpool') {
+                            marcaName.className += ' whirlpool-large';
+                        }
                         marcaName.textContent = alt.toUpperCase();
                         this.parentElement.appendChild(marcaName);
                     }
