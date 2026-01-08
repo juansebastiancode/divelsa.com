@@ -972,32 +972,58 @@ document.addEventListener('DOMContentLoaded', function() {
         const alt = img.alt;
         let hasLoaded = false;
         let errorCount = 0;
+        let retryTimeout = null;
         
-        // Marcar cuando la imagen carga correctamente
+        // Marcar cuando la imagen carga correctamente - mantenerla visible
         img.addEventListener('load', function() {
             hasLoaded = true;
             this.style.opacity = '1';
+            this.style.display = 'block';
+            // Limpiar cualquier timeout pendiente
+            if (retryTimeout) {
+                clearTimeout(retryTimeout);
+            }
+            // Asegurarse de que no hay nombre de marca si la imagen cargó
+            const existingName = this.parentElement.querySelector('.marca-name:not(.marca-name-permanent)');
+            if (existingName) {
+                existingName.remove();
+            }
         });
         
         // Solo manejar errores si la imagen realmente falla
         img.addEventListener('error', function() {
+            // Si ya cargó antes, no hacer nada
+            if (hasLoaded) return;
+            
             errorCount++;
             
-            // Si es el primer error, intentar recargar con timestamp
-            if (errorCount === 1 && !hasLoaded) {
-                const separator = originalSrc.includes('?') ? '&' : '?';
-                this.src = originalSrc + separator + '_=' + Date.now();
-            } else if (errorCount >= 2 && !hasLoaded) {
-                // Solo ocultar si realmente falló después de varios intentos
-                this.style.display = 'none';
-                if (!this.parentElement.querySelector('.marca-name') && alt) {
-                    const marcaName = document.createElement('span');
-                    marcaName.className = 'marca-name';
-                    marcaName.textContent = alt.toUpperCase();
-                    this.parentElement.appendChild(marcaName);
+            // Si es el primer error, intentar recargar con timestamp después de un pequeño delay
+            if (errorCount === 1) {
+                retryTimeout = setTimeout(() => {
+                    if (!hasLoaded) {
+                        const separator = originalSrc.includes('?') ? '&' : '?';
+                        this.src = originalSrc + separator + '_=' + Date.now();
+                    }
+                }, 500);
+            } else if (errorCount >= 2) {
+                // Solo ocultar y mostrar nombre si realmente falló después de varios intentos
+                if (!hasLoaded) {
+                    this.style.display = 'none';
+                    if (!this.parentElement.querySelector('.marca-name') && alt) {
+                        const marcaName = document.createElement('span');
+                        marcaName.className = 'marca-name';
+                        marcaName.textContent = alt.toUpperCase();
+                        this.parentElement.appendChild(marcaName);
+                    }
                 }
             }
         });
+        
+        // Verificar si la imagen ya está cargada al inicio
+        if (img.complete && img.naturalHeight !== 0) {
+            hasLoaded = true;
+            img.style.opacity = '1';
+        }
     });
 });
 
