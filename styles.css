@@ -2687,7 +2687,28 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .highlights-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 16px;
+        padding-bottom: 10px;
+        padding-left: 48px;
+        padding-right: 24px;
+        margin-left: -24px;
+        margin-right: -24px;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 24px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .highlights-grid .highlight-card {
+        width: calc(100vw - 80px);
+        max-width: 320px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        overflow: visible;
+        box-shadow: none;
+        border: 1px solid rgba(0, 0, 0, 0.1);
     }
     
     .ventajas-grid {
@@ -2836,7 +2857,30 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: -40px;
     }
     
-    .ventajas-grid,
+    .ventajas-grid {
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 16px;
+        padding-bottom: 10px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: -24px;
+        margin-right: -24px;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 24px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .ventajas-grid .ventaja-card {
+        width: calc(100vw - 80px);
+        max-width: 320px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        overflow: visible;
+        box-shadow: none;
+    }
+    
     .fortalezas-grid,
     .servicios-grid,
     .sinersis-valores,
@@ -2865,7 +2909,28 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .marcas-grid {
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 12px;
+        padding-bottom: 10px;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin-left: -24px;
+        margin-right: -24px;
+        scroll-snap-type: x mandatory;
+        scroll-padding-left: 24px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .marcas-grid .marca-card {
+        width: calc((100vw - 80px) / 2.2);
+        min-width: 150px;
+        max-width: 170px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        overflow: visible;
+        box-shadow: none;
     }
     
     .alianzas-logos {
