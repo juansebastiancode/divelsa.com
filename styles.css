@@ -791,7 +791,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    min-height: 380px;
+    min-height: 480px;
 }
 
 .highlight-card:hover {
@@ -820,7 +820,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .highlight-img {
-    height: 180px;
+    height: 240px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -878,21 +878,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .highlight-content {
-    padding: 20px 22px 16px;
+    padding: 28px 28px 24px;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .highlight-content h3 {
-    font-size: 1.3rem;
-    margin-bottom: 8px;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
 }
 
 .highlight-content p {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     flex: 1;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     color: var(--gray-500);
 }
 
