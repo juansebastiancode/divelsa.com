@@ -3148,6 +3148,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .page-banner {
         height: 200px;
+        margin-top: 100px;
     }
     
     .page-banner-content h1 {
@@ -3156,6 +3157,10 @@ h1, h2, h3, h4, h5, h6 {
     
     .page-banner-content p {
         font-size: 1rem;
+    }
+    
+    .page-content {
+        padding: 30px 0;
     }
     
     .about-banner-content h2,
