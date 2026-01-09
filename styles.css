@@ -2643,7 +2643,7 @@ h1, h2, h3, h4, h5, h6 {
     .carousel-slide {
         grid-template-columns: 1fr;
         text-align: left;
-        padding-top: 140px;
+        padding-top: 50px;
     }
     
     .slide-content {
@@ -2803,17 +2803,24 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .hero-carousel {
-        min-height: 600px;
+        min-height: 450px;
+        height: 100vh;
         margin-top: 100px;
     }
     
     .slide-bg {
-        top: 0;
-        height: 100%;
+        display: none;
+    }
+    
+    .slide-bg-1,
+    .slide-bg-2,
+    .slide-bg-3,
+    .slide-bg-4 {
+        display: none;
     }
     
     .carousel-slide {
-        padding: 120px 24px 100px;
+        padding: 20px 24px 30px;
         text-align: left;
     }
     
@@ -2822,13 +2829,17 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .slide-title {
-        font-size: 2.5rem;
-        margin-bottom: 14px;
+        font-size: 5.5rem;
+        margin-bottom: 16px;
         text-align: left;
+        line-height: 1.2;
     }
     
     .slide-description {
         text-align: left;
+        margin-bottom: 24px;
+        font-size: 1.9rem;
+        line-height: 1.6;
     }
     
     .slide-buttons {
@@ -2837,20 +2848,35 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .slide-visual {
-        margin-bottom: 20px;
+        display: none !important;
     }
     
     .map-visual {
-        max-width: 350px;
+        display: none !important;
     }
     
     #map-hero {
-        height: 350px;
+        display: none !important;
     }
     
     .slide-visual.slide-map {
-        max-width: 100%;
-        height: 300px;
+        display: none !important;
+    }
+    
+    .floating-icon {
+        display: none !important;
+    }
+    
+    .floating-label {
+        display: none !important;
+    }
+    
+    .floating-badge {
+        display: none !important;
+    }
+    
+    .slide-visual.floating-icons {
+        display: none !important;
     }
     
     .service-visual {
@@ -3032,7 +3058,8 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .hero-carousel {
-        min-height: 550px;
+        min-height: 400px;
+        height: auto;
         margin-top: 80px;
     }
     
@@ -3042,7 +3069,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .carousel-slide {
-        padding: 100px 16px 80px;
+        padding: 50px 16px 40px;
         text-align: left;
     }
     
