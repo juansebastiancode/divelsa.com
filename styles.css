@@ -2456,8 +2456,8 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: var(--radius-md);
+    background: transparent;
+    border-radius: 0;
     transition: var(--transition);
 }
 
@@ -2468,7 +2468,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-social a:hover {
-    background: var(--primary);
+    background: transparent;
     transform: translateY(-3px);
 }
 

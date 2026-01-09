@@ -9,3 +9,4 @@ Disallow: /img/
 Disallow: /*.txt$
 Disallow: /*.js$
 
+
