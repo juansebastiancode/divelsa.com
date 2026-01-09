@@ -1903,6 +1903,16 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
 }
 
+/* Logos dentro de cada bloque de alianza (sin fondo y a la izquierda) */
+.alianza-section .alianza-logo {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    justify-content: flex-start;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
 .alianza-logo img {
     max-height: 120px;
     width: auto;
@@ -1915,6 +1925,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-euronics img {
     max-height: 50px;
+}
+
+/* Más espacio bajo el logo de Euronics en su bloque de alianza */
+.alianza-section .logo-euronics {
+    margin-bottom: 40px;
 }
 
 .alianza-section {
