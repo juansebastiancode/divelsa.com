@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 zoomControl: false,
                 scrollWheelZoom: false,
                 dragging: false,
+                doubleClickZoom: false,
+                touchZoom: false,
+                boxZoom: false,
+                keyboard: false,
                 attributionControl: false
             }).setView([39.0, -0.3], 6);
             
