@@ -299,13 +299,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 { lat: 38.7337, lng: 0.1030, name: 'Euronics Benitachell', address: 'Comercial Al Aire, París, 2, Benitachell', isHQ: false },
                 { lat: 38.8600, lng: -0.1083, name: 'Euronics Cepa', address: 'Avda. Del Port, 12, Orba', isHQ: false },
                 { lat: 37.9428, lng: -0.8397, name: 'Euronics Ciudad Quesada', address: 'Avda. Salamanca, 11, Rojales', isHQ: false },
-                { lat: 38.3068, lng: -0.4015, name: 'Euronics Hondón de las Nieves', address: 'Requejo, 5, Hondón de las Nieves', isHQ: false },
+                // Coordenadas ligeramente movidas hacia el interior para evitar que el marcador salga en el mar
+                { lat: 38.3068, lng: -0.7, name: 'Euronics Hondón de las Nieves', address: 'Requejo, 5, Hondón de las Nieves', isHQ: false },
                 { lat: 38.4771, lng: -0.7932, name: 'Euronics Elda', address: 'Jaime Balmes, 20, Elda', isHQ: false },
                 { lat: 38.8225, lng: -0.1025, name: 'Euronics Benidoleig', address: 'Avda. Luis Pérez, 14, Benidoleig', isHQ: false },
                 { lat: 38.1411, lng: -0.8944, name: 'Euronics Cox', address: 'Avda. Del Carmen, 116, Cox', isHQ: false },
                 { lat: 38.5842, lng: -0.1403, name: 'Euronics Callosa de Ensarriá', address: 'Jaume Roig, Local 2, Callosa de Ensarriá', isHQ: false },
                 { lat: 38.8564, lng: -0.1186, name: 'Euronics Pego', address: 'Jaime I, 17, Pego', isHQ: false },
-                { lat: 38.1108, lng: -0.4097, name: 'Euronics Gran Alacant', address: 'Avda. Finlandia, 23, Santa Pola', isHQ: false },
+                // Coordenadas ligeramente movidas hacia el interior para evitar que el marcador salga en el mar
+                { lat: 38.1108, lng: -0.7, name: 'Euronics Gran Alacant', address: 'Av. de Finlandia, 23, Bloque-3 Local-2, 03130 Gran Alacant, Alicante', isHQ: false },
                 { lat: 38.3452, lng: -0.4810, name: 'Euronics Janaral', address: "General O'donell, 3, Alicante", isHQ: false },
                 { lat: 38.2669, lng: -0.6988, name: 'Euronics Jocar', address: 'Francisco Vicente Rodríguez, 6, Elche', isHQ: false },
                 { lat: 37.9838, lng: -0.6791, name: 'Euronics Keaki', address: 'Av. Rosa Mazón Valero, Torrevieja', isHQ: false },
@@ -351,7 +353,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Castellón
                 { lat: 39.8856, lng: -0.0833, name: 'Euronics Cabedo', address: 'Calle Menendez Y Pelayo, 26, Burriana', isHQ: false },
                 { lat: 39.7331, lng: -0.2233, name: 'Euronics Ferreres', address: 'Avda. Jaime I, 50, Vall de Uxó', isHQ: false },
-                { lat: 40.0414, lng: 0.1342, name: 'Euronics La Plana', address: 'Ferrán I de Antequera, 24, Oropesa Del Mar', isHQ: false },
+                // Coordenadas ligeramente movidas hacia el interior para evitar que el marcador salga en el mar
+                { lat: 40.0414, lng: -0.2, name: 'Euronics La Plana', address: 'Ferrán I de Antequera, 24, Oropesa Del Mar', isHQ: false },
                 { lat: 39.9864, lng: -0.0513, name: 'Euronics Maggober', address: 'Av. dels Germans Bou, 17, Castellón de la Plana', isHQ: false },
                 { lat: 39.8489, lng: -0.4872, name: 'Euronics Segorbe', address: 'Plaza Jaime I, 9, Segorbe', isHQ: false },
                 { lat: 39.9864, lng: -0.0413, name: 'Euronics Vilarservi', address: 'San Roque, 22, Castellón de la Plana', isHQ: false }
