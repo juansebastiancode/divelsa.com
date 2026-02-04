@@ -124,7 +124,10 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0;
+    /* espacio entre el logo azul y el logo de la derecha (Tien21/Euronics) */
+    gap: 16px;
+    /* separa el bloque de logos del menú/fotos de la derecha en todos los headers */
+    margin-right: 32px;
 }
 
 .logo-secondary {
@@ -135,6 +138,11 @@ h1, h2, h3, h4, h5, h6 {
     height: 115px;
     width: auto;
     object-fit: contain;
+}
+
+/* Logo principal azul más pequeño en el header */
+.header .logo-img:first-of-type {
+    height: 45px;
 }
 
 .nav {
@@ -2790,6 +2798,11 @@ h1, h2, h3, h4, h5, h6 {
         height: 60px !important;
     }
     
+    /* Logo azul más pequeño en el header para tablets y móviles */
+    .header .logo-img:first-of-type {
+        height: 30px !important;
+    }
+    
     .logo-secondary {
         height: 30px !important;
     }
@@ -3051,6 +3064,11 @@ h1, h2, h3, h4, h5, h6 {
     
     .logo-img {
         height: 50px !important;
+    }
+    
+    /* Logo azul más pequeño en móviles muy pequeños */
+    .header .logo-img:first-of-type {
+        height: 32px !important;
     }
     
     .logo-secondary {
