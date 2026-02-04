@@ -2374,6 +2374,8 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--gray-50);
     padding: 48px;
     border-radius: var(--radius-lg);
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .contacto-form-section h3 {
