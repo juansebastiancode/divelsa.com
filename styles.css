@@ -2123,6 +2123,9 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .blog-card:hover {
