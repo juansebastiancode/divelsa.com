@@ -244,6 +244,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 iconAnchor: [12, 24]
             });
 
+            // Helper para formatear el nombre de tienda coloreando la marca
+            function formatStoreName(name, brand) {
+                const prefix = brand + ' ';
+                if (!name.startsWith(prefix)) {
+                    return `<strong>${name}</strong>`;
+                }
+
+                const rest = name.slice(prefix.length);
+                const color = brand === 'Euronics' ? '#1a4f8b' : '#e63946';
+
+                return `<strong><span style="color: ${color}; font-weight: 700;">${brand}</span> ${rest}</strong>`;
+            }
+
             // Marcadores de tiendas Euronics
             const locations = [
                 // Sede Central
@@ -391,25 +404,28 @@ document.addEventListener('DOMContentLoaded', function() {
             ];
 
             locations.forEach(loc => {
+                const nameHtml = formatStoreName(loc.name, 'Euronics');
+
                 const marker = L.marker([loc.lat, loc.lng], {
                     icon: loc.isHQ ? hqIcon : storeIcon
                 }).addTo(tiendasMap);
                 
                 marker.bindPopup(`
-                    <strong>${loc.name}</strong>
-                    ${loc.isHQ ? '<br><span style="color: #ffd700; font-weight: bold;">Sede Central</span>' : '<br><span style="color: #1a4f8b; font-weight: bold;">Euronics</span>'}
+                    ${nameHtml}
+                    ${loc.isHQ ? '<br><span style="color: #ffd700; font-weight: bold;">Sede Central</span>' : ''}
                     <br><span style="font-size: 12px; color: #666;">${loc.address}</span>
                 `);
             });
 
             tien21Locations.forEach(loc => {
+                const nameHtml = formatStoreName(loc.name, 'Tien21');
+
                 const marker = L.marker([loc.lat, loc.lng], {
                     icon: tien21Icon
                 }).addTo(tiendasMap);
                 
                 marker.bindPopup(`
-                    <strong>${loc.name}</strong>
-                    <br><span style="color: #e63946; font-weight: bold;">Tien21</span>
+                    ${nameHtml}
                     <br><span style="font-size: 12px; color: #666;">${loc.address}</span>
                 `);
             });
@@ -435,7 +451,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             L.marker([39.52006342482848, -0.455911984432042], { icon: hqIcon })
                 .addTo(contactoMap)
-                .bindPopup('<strong>Euronics Paterna</strong><br>Parque Empresarial<br>Carrer del Manyá, 22<br>46980 Paterna, Valencia<br>Tel: 961 34 30 52');
+                .bindPopup('<strong><span style="color: #1a4f8b; font-weight: 700;">Euronics</span> Paterna</strong><br>Parque Empresarial<br>Carrer del Manyá, 22<br>46980 Paterna, Valencia<br>Tel: 961 34 30 52');
         }
     }
 
