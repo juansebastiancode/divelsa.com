@@ -834,12 +834,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // ===== Blog Links - Página en construcción =====
+    // ===== Blog Links - Página en construcción (solo si no tienen href real) =====
     document.querySelectorAll('.blog-card a, .blog-meta a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert('Este artículo estará disponible próximamente.');
-        });
+        const href = link.getAttribute('href');
+        if (!href || href === '#') {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                alert('Este artículo estará disponible próximamente.');
+            });
+        }
     });
 
     // ===== Cargar más artículos =====
